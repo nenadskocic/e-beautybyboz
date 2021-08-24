@@ -12,6 +12,7 @@
     "bootstrap-icons": "^1.5.0",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.6.5",
+    "vue-mq": "^1.0.1",
     "vue-router": "^3.5.2",
     "vueperslides": "^2.15.2"
   },
