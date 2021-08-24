@@ -1,10 +1,6 @@
 <template>
   <div>
     <b-navbar type="dark" toggleable="lg">
-      <b-navbar-brand href="#">
-        <img src="@/assets/images/logos/BbB-Full-Logo-Digital.png" />
-      </b-navbar-brand>
-
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-navbar-nav>
@@ -24,6 +20,11 @@
           <b-nav-item :to="{ name: 'team' }" class="mx-auto"
             >Our Team</b-nav-item
           >
+        </b-navbar-nav>
+        <b-navbar-nav class="mx-auto" id="middle">
+          <b-navbar-brand href="#">
+            <img src="@/assets/images/logos/BbB-Full-Logo-Digital.png" />
+          </b-navbar-brand>
         </b-navbar-nav>
         <b-navbar-nav class="mx-auto" id="right">
           <b-nav-item :to="{ name: 'services' }" class="mx-auto"
@@ -64,30 +65,23 @@
 
 .navbar {
   background-color: whitesmoke;
-  height: 8rem;
+  position: relative;
 }
 .navbar-nav {
   width: 100%;
-}
-#left {
-  width: 25%;
-  margin-left: 25%;
-}
-#right {
-  width: 25%;
-  margin-right: 25%;
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar-dark .navbar-nav .nav-link {
   color: black !important;
 }
-.navbar-brand {
+navbar-brand {
   transform: translateX(-50%);
   left: 50%;
   position: absolute;
 }
 .navbar-brand img {
-  height: 100%;
   width: 300px;
 }
 .nav-item {
