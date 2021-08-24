@@ -25,7 +25,7 @@
       <p>©2021 BeautyByBoz </p>
     </b-row>
     <b-row>
-      <p>Web design by Enigma Design  </p>
+      <p>Web design by <a href="https://www.enigmaly.ca">Enigmaly</a>   </p>
     </b-row>
   </footer>
 </template>
