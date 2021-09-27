@@ -71,21 +71,23 @@
   width: 100%;
   align-items: center;
   justify-content: center;
+  height: 100px;
 }
-
 .navbar-dark .navbar-nav .nav-link {
   color: black !important;
 }
-navbar-brand {
+/*
+.navbar-brand {
   transform: translateX(-50%);
   left: 50%;
   position: absolute;
 }
+*/
 .navbar-brand img {
   width: 300px;
 }
-.nav-item {
-  font-size: 24px;
+.navbar .nav-item {
+  font-size: 18px;
 }
 .navbar-dark .navbar-nav .nav-link .v1 {
   color: gray;
