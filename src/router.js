@@ -1,12 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import About from './components/About.vue'
-import Team from './components/Team.vue'
 import Testimonals from './components/Testimonals.vue'
+import Team from './components/Team.vue'
 import Services from './components/Services.vue'
-import Contact from './components/Contact.vue'
 import Shop from './components/Shop.vue'
-
+import Contact from './components/Contact.vue'
 
 export default new Router({
   mode: "history",
