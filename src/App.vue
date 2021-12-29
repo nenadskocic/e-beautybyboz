@@ -18,6 +18,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import VueMq from "vue-mq";
 import VueCarousel from "vue-carousel";
+import VueAwesomeSwiper from "vue-awesome-swiper";
+import "swiper/swiper-bundle.min.css";
+import '@fortawesome/fontawesome-free/css/all.css'
+import '@fortawesome/fontawesome-free/js/all.js'
 
 Vue.use(BootstrapVue);
 Vue.use(BootstrapVueIcons);
@@ -26,6 +30,7 @@ Vue.use(VueMq, {
   defaultBreakpoint: "phone",
 });
 Vue.use(VueCarousel);
+Vue.use(VueAwesomeSwiper);
 
 export default {
   name: "App",
