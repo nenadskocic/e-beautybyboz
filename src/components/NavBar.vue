@@ -1,56 +1,69 @@
 <template>
   <div>
-    <b-navbar type="dark" toggleable="lg">
+    <b-navbar>
+      <b-navbar-nav id="topNav">
+        <div>
+          <b-navbar-nav>
+            <b-navbar-brand href="#">
+              <img src="@/assets/images/logos/BbB-Full-Logo-Digital.png" />
+            </b-navbar-brand>
+          </b-navbar-nav>
+        </div>
+      </b-navbar-nav>
+    </b-navbar>
+    <b-navbar type="dark" toggleable="lg" id="bottomNav">
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
       <b-navbar-nav>
-        <b-navbar-nav class="mx-auto" id="left">
-          <b-nav-item :to="{ name: 'about' }" class="mx-auto"
-            >About Us</b-nav-item
+        <b-navbar-nav class="m-auto">
+          <b-nav-item :to="{ name: 'about' }" class="m-auto"
+            ><p>About Us</p></b-nav-item
           >
           <b-nav-item>
-            <div class="v1">|</div>
+            <div>|</div>
           </b-nav-item>
-          <b-nav-item :to="{ name: 'testimonals' }" class="mx-auto"
-            >Testimonals</b-nav-item
+          <b-nav-item :to="{ name: 'testimonals' }" class="m-auto"
+            ><p>Testimonals</p></b-nav-item
           >
           <b-nav-item>
-            <div class="v1">|</div>
+            <div>|</div>
           </b-nav-item>
-          <b-nav-item :to="{ name: 'team' }" class="mx-auto"
-            >Our Team</b-nav-item
+          <b-nav-item :to="{ name: 'team' }" class="m-auto"
+            ><p>Our Team</p></b-nav-item
           >
+          <b-nav-item>
+            <div>|</div>
+          </b-nav-item>
         </b-navbar-nav>
-        <b-navbar-nav class="mx-auto" id="middle">
-          <b-navbar-brand href="#">
-            <img src="@/assets/images/logos/BbB-Full-Logo-Digital.png" />
-          </b-navbar-brand>
-        </b-navbar-nav>
-        <b-navbar-nav class="mx-auto" id="right">
-          <b-nav-item :to="{ name: 'services' }" class="mx-auto"
-            >Services</b-nav-item
+        <b-navbar-nav>
+          <b-nav-item :to="{ name: 'services' }" class="m-auto"
+            ><p>Services</p></b-nav-item
           >
           <b-nav-item>
-            <div class="v1">|</div>
+            <div>|</div>
           </b-nav-item>
-          <b-nav-item :to="{ name: 'shop' }" class="mx-auto">Shop</b-nav-item>
-          <b-nav-item>
-            <div class="v1">|</div>
-          </b-nav-item>
-          <b-nav-item :to="{ name: 'contact' }" class="mx-auto"
-            >Contact Us</b-nav-item
+          <b-nav-item :to="{ name: 'shop' }" class="m-auto"
+            ><p>Shop</p></b-nav-item
           >
           <b-nav-item>
-            <div class="v1">|</div>
+            <div>|</div>
           </b-nav-item>
+          <b-nav-item :to="{ name: 'contact' }" class="m-auto"
+            ><p>Contact Us</p></b-nav-item
+          >
           <b-nav-item>
+            <div>|</div>
+          </b-nav-item>
+          <b-nav-item
+            class="m-auto"
+            href="https://www.facebook.com/BeautybyBoz.BbB"
+          >
             <b-icon icon="facebook"></b-icon>
           </b-nav-item>
-          <b-nav-item>
+          <b-nav-item
+            class="m-auto"
+            href="https://www.instagram.com/beautybyboz/"
+          >
             <b-icon icon="instagram"></b-icon>
-          </b-nav-item>
-          <b-nav-item>
-            <b-icon icon="twitter"></b-icon>
           </b-nav-item>
         </b-navbar-nav>
       </b-navbar-nav>
@@ -67,29 +80,37 @@
   background-color: whitesmoke;
   position: relative;
 }
-.navbar-nav {
+#topNav {
+  height: 100px;
+}
+#bottomNav {
   width: 100%;
   align-items: center;
   justify-content: center;
-  height: 100px;
+  height: 50px;
+  font-size: 18px;
+  padding-bottom: 20px;
 }
 .navbar-dark .navbar-nav .nav-link {
+  color: gray !important;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+}
+.nav-item p:hover {
   color: black !important;
 }
-/*
-.navbar-brand {
-  transform: translateX(-50%);
-  left: 50%;
-  position: absolute;
-}
-*/
 .navbar-brand img {
   width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .navbar .nav-item {
-  font-size: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
-.navbar-dark .navbar-nav .nav-link .v1 {
-  color: gray;
+.nav-link svg {
+  color: black !important;
 }
 </style>
