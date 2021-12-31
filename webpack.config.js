@@ -34,50 +34,90 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
  */
 
 const TerserPlugin = require('terser-webpack-plugin');
+const { VueLoaderPlugin } = require('vue-loader');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 
 module.exports = {
 	mode: 'development',
 
+	entry: {
+		app: [
+			'./src/main.js'
+		]
+	},
+
 	plugins: [
 		new webpack.ProgressPlugin(),
-		new MiniCssExtractPlugin({ filename: 'bundle.[contenthash].css' })
+		new MiniCssExtractPlugin({ filename: 'bundle.[contenthash].css' }),
+		new VueLoaderPlugin(),
+		new HtmlWebpackPlugin(),
 	],
 
 	module: {
 		rules: [
 			{
 				test: /\.(js|jsx)$/,
-				include: [path.resolve(__dirname, 'src')],
-				loader: 'babel-loader'
+				include: path.resolve(__dirname, './src'),
+				loader: 'babel-loader',
+				exclude : /node_modules/
+			},
+			{
+				test: /\.vue$/,
+				loader: 'vue-loader',
 			},
 			{
 				test: /.(scss|css)$/,
-
 				use: [
 					{
 						loader: MiniCssExtractPlugin.loader
 					},
 					{
-						loader: 'style-loader'
-					},
-					{
 						loader: 'css-loader',
 
 						options: {
-							sourceMap: true
-						}
+							sourceMap: true,
+						},
 					},
-					{
-						loader: 'sass-loader',
+				],
 
-						options: {
-							sourceMap: true
-						}
+			},
+			{
+				test: /\.(png|jpg|gif)$/i,
+				use: [
+					{
+					  	loader: 'url-loader',
+					  	options: {
+							limit: 10000,
+					  	},
+					},
+				]
+			},
+			{
+				test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+				use: [
+					{
+					  loader: 'file-loader',
+					  options: {
+						name: '[name].[ext]',
+						outputPath: 'fonts/'
+					  }
 					}
 				]
-			}
+			},
+			{
+				test: /\.html$/i,
+				include: path.resolve(__dirname, './public'),
+				loader: "html-loader",
+			},
 		]
 	},
+	resolve: {
+        alias: {
+            'vue$': 'vue/dist/vue.esm.js'
+        },
+        extensions: ['*', '.js', '.vue', '.json']
+    },
 
 	optimization: {
 		minimizer: [new TerserPlugin()],
