@@ -4,7 +4,7 @@
       <div class="container">
         <div>
           <img
-            src="@/assets/images/products/tan/Norvell_Sunless_Application_Mitt.png"
+            src="../assets/images/products/tan/Norvell_Sunless_Application_Mitt.png"
           />
         </div>
         <div class="text">
@@ -32,7 +32,7 @@
       <div class="container">
         <div>
           <img
-            src="@/assets/images/products/tan/Venetian_Self_Tanning_Mist_for_Face_2oz.png"
+            src="../assets/images/products/tan/Venetian_Self_Tanning_Mist_for_Face_2oz.png"
           />
         </div>
         <div class="text">
@@ -65,7 +65,7 @@
       <div class="container">
         <div>
           <img
-            src="@/assets/images/products/tan/Venetian_Gradual_Self_Tanning_Lotion_8.5oz.png"
+            src="../assets/images/products/tan/Venetian_Gradual_Self_Tanning_Lotion_8.5oz.png"
           />
         </div>
         <div class="text">
@@ -93,7 +93,7 @@
       <div class="container">
         <div>
           <img
-            src="@/assets/images/products/tan/Venetian_Self_Tanning_Mousse_8oz.png"
+            src="../assets/images/products/tan/Venetian_Self_Tanning_Mousse_8oz.png"
           />
         </div>
         <div class="text">
@@ -129,7 +129,7 @@
       <div class="container">
         <div>
           <img
-            src="@/assets/images/products/tan/Venetian_Rapid_Self_Tanning_Lotion.png"
+            src="../assets/images/products/tan/Venetian_Rapid_Self_Tanning_Lotion.png"
           />
         </div>
         <div class="text">
@@ -161,7 +161,7 @@
       <div class="container">
         <div>
           <img
-            src="@/assets/images/products/tan/Venetian_Self_Tanning_Mist_7oz.png"
+            src="../assets/images/products/tan/Venetian_Self_Tanning_Mist_7oz.png"
           />
         </div>
         <div class="text">

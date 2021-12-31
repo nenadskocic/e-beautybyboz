@@ -2,7 +2,7 @@
   <footer>
     <b-row id="top">BeautyByBoz | Stoney Creek, Ontario</b-row>
     <b-row>
-      <img src="@/assets/images/logos/BbB-Circle-Logo-Digital.png" />
+      <img src="../assets/images/logos/BbB-Circle-Logo-Digital.png" />
     </b-row>
     <b-row>
       <b-navbar id="footerNav">
@@ -30,9 +30,7 @@
   </footer>
 </template>
 <script></script>
-<style lang="scss" scoped>
-@import "@/assets/css/palette.scss";
-
+<style scoped>
 footer {
   background-color: whitesmoke;
   font-weight: 500;

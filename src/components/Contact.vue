@@ -335,7 +335,6 @@ header h1 {
   position: relative;
   user-select: none;
   margin: 0 26px 16px 0;
-  float: left;
 }
 .vue-form input[type="radio"],
 .vue-form input[type="checkbox"] {

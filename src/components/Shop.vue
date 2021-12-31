@@ -21,7 +21,7 @@ export default {
   },
 };
 </script>
-<style lang="scss">
+<style scoped>
 .shop {
   height: calc(100vh - 459px);
   flex-direction: column;
@@ -35,7 +35,7 @@ export default {
   position: relative;
   display: table;
   table-layout: fixed;
-  //background-color: #dcc2b0;
+  background-color: #dcc2b0;
   background-color: rgb(236, 227, 221);
   padding: 20px;
 }
@@ -46,5 +46,4 @@ h1 {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 32px;
 }
-@import "@/assets/css/palette.scss";
 </style>

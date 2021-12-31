@@ -5,7 +5,7 @@
         <div>
           <b-navbar-nav>
             <b-navbar-brand href="#">
-              <img src="@/assets/images/logos/BbB-Full-Logo-Digital.png" />
+              <img src="../assets/images/logos/BbB-Full-Logo-Digital.png" />
             </b-navbar-brand>
           </b-navbar-nav>
         </div>
@@ -53,16 +53,10 @@
           <b-nav-item>
             <div>|</div>
           </b-nav-item>
-          <b-nav-item
-            class="m-auto"
-            href="https://www.facebook.com/BeautybyBoz.BbB"
-          >
+          <b-nav-item href="https://www.facebook.com/BeautybyBoz.BbB">
             <b-icon icon="facebook"></b-icon>
           </b-nav-item>
-          <b-nav-item
-            class="m-auto"
-            href="https://www.instagram.com/beautybyboz/"
-          >
+          <b-nav-item href="https://www.instagram.com/beautybyboz/">
             <b-icon icon="instagram"></b-icon>
           </b-nav-item>
         </b-navbar-nav>
@@ -70,12 +64,9 @@
     </b-navbar>
   </div>
 </template>
-
 <script>
 </script>
-<style lang="scss">
-@import "@/assets/css/palette.scss";
-
+<style scoped>
 .navbar {
   background-color: whitesmoke;
   position: relative;

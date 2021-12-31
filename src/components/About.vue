@@ -22,9 +22,7 @@
     </div>
   </div>
 </template>
-<style lang="scss">
-@import "@/assets/css/palette.scss";
-
+<style scoped>
 .about {
   background-color: white;
   font-size: 18px;
