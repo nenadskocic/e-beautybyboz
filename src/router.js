@@ -10,7 +10,7 @@ import Contact from './components/Contact.vue'
 export default new Router({
   mode: "history",
   routes: [
-      { path: '/'},
+      { path: '/', name: 'about', component: About },
       { path: '/aboutus', name: 'about', component: About },
       { path: '/ourteam', name: 'team', component: Team },
       { path: '/testimonals', name: 'testimonals', component: Testimonals },
