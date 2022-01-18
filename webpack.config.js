@@ -36,7 +36,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
 	mode: 'development',
@@ -52,6 +52,7 @@ module.exports = {
 		new MiniCssExtractPlugin({ filename: 'bundle.[contenthash].css' }),
 		new VueLoaderPlugin(),
 		new HtmlWebpackPlugin(),
+		new Dotenv(),
 	],
 
 	module: {
