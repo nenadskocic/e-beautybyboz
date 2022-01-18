@@ -2,7 +2,7 @@
   <footer>
     <b-row id="top">BeautyByBoz | Stoney Creek, Ontario</b-row>
     <b-row>
-      <img src="../assets/images/logos/BbB-Circle-Logo-Digital.png" />
+      <img src="../assets/images/logos/BbB-Full-Logo-Digital.png" />
     </b-row>
     <b-row>
       <b-navbar id="footerNav">
@@ -30,9 +30,9 @@
   </footer>
 </template>
 <script></script>
-<style scoped>
+<style lang="scss" scoped>
 footer {
-  background-color: whitesmoke;
+  background-color: rgb(175, 174, 174);
   font-weight: 500;
 }
 footer a {
@@ -56,22 +56,26 @@ footer p:hover {
   padding: 0;
   margin: 0;
 }
-.row img {
-  width: 150px;
-}
-.navbar-nav {
-  justify-content: center;
-}
-.nav-item {
-  font-size: 18px;
+img {
+  width: 200px;
 }
 #footerNav {
-  background-color: whitesmoke;
+  background-color: rgb(175, 174, 174);
   width: 100%;
   align-items: center;
   justify-content: center;
+  .navbar-nav {
+    justify-content: center;
+  }
+  .nav-item {
+    p,
+    a {
+      font-size: 1rem;
+    }
+  }
 }
 #ref {
   padding: 10px 0 10px 0;
+  font-size: 1rem;
 }
 </style>
