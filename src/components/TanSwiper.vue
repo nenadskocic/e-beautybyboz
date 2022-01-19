@@ -1,13 +1,15 @@
 <template>
   <swiper class="swiper" :options="swiperOption">
     <swiper-slide>
-      <div class="container">
-        <div>
-          <img
-            src="../assets/images/products/tan/Norvell_Sunless_Application_Mitt.png"
-          />
+      <div class="grid-ish">
+        <div class="col">
+          <p id="img">
+            <img
+              src="../assets/images/products/tan/Norvell_Sunless_Application_Mitt.png"
+            />
+          </p>
         </div>
-        <div class="text">
+        <div class="col">
           <p>Norvell Applicator Mitt - <b>$8.00</b></p>
           <br />
           <p>
@@ -29,13 +31,15 @@
       </div>
     </swiper-slide>
     <swiper-slide>
-      <div class="container">
-        <div>
-          <img
-            src="../assets/images/products/tan/Venetian_Self_Tanning_Mist_for_Face_2oz.png"
-          />
+      <div class="grid-ish">
+        <div class="col">
+          <p id="img">
+            <img
+              src="../assets/images/products/tan/Venetian_Self_Tanning_Mist_for_Face_2oz.png"
+            />
+          </p>
         </div>
-        <div class="text">
+        <div class="col">
           <p>Venetian Self Tanning Mist for Face - <b>$14.00</b></p>
           <br />
 
@@ -62,13 +66,15 @@
       </div>
     </swiper-slide>
     <swiper-slide>
-      <div class="container">
-        <div>
-          <img
-            src="../assets/images/products/tan/Venetian_Gradual_Self_Tanning_Lotion_8.5oz.png"
-          />
+      <div class="grid-ish">
+        <div class="col">
+          <p id="img">
+            <img
+              src="../assets/images/products/tan/Venetian_Gradual_Self_Tanning_Lotion_8.5oz.png"
+            />
+          </p>
         </div>
-        <div class="text">
+        <div class="col">
           <p>Venetian Gradual Self Tanning Lotion- <b>$40.00</b></p>
           <br />
           <p>
@@ -90,13 +96,15 @@
       </div>
     </swiper-slide>
     <swiper-slide>
-      <div class="container">
-        <div>
-          <img
-            src="../assets/images/products/tan/Venetian_Self_Tanning_Mousse_8oz.png"
-          />
+      <div class="grid-ish">
+        <div class="col">
+          <p id="img">
+            <img
+              src="../assets/images/products/tan/Venetian_Self_Tanning_Mousse_8oz.png"
+            />
+          </p>
         </div>
-        <div class="text">
+        <div class="col">
           <p>Venetian Self Tanning Mousse - <b>$42.00</b></p>
           <br />
           <p>
@@ -126,13 +134,15 @@
       </div>
     </swiper-slide>
     <swiper-slide>
-      <div class="container">
-        <div>
-          <img
-            src="../assets/images/products/tan/Venetian_Rapid_Self_Tanning_Lotion.png"
-          />
+      <div class="grid-ish">
+        <div class="col">
+          <p id="img">
+            <img
+              src="../assets/images/products/tan/Venetian_Rapid_Self_Tanning_Lotion.png"
+            />
+          </p>
         </div>
-        <div class="text">
+        <div class="col">
           <p>Venetian Rapid Self Tanning Lotion - <b>$46.00</b></p>
           <br />
           <p>
@@ -158,13 +168,15 @@
       </div>
     </swiper-slide>
     <swiper-slide>
-      <div class="container">
-        <div>
-          <img
-            src="../assets/images/products/tan/Venetian_Self_Tanning_Mist_7oz.png"
-          />
+      <div class="grid-ish">
+        <div class="col">
+          <p id="img">
+            <img
+              src="../assets/images/products/tan/Venetian_Self_Tanning_Mist_7oz.png"
+            />
+          </p>
         </div>
-        <div class="text">
+        <div class="col">
           <p>Venetian Self Tanning Mist - <b>$54.00</b></p>
           <br />
           <p>
@@ -194,8 +206,7 @@
         </div>
       </div>
     </swiper-slide>
-    <div class="swiper-button-prev" slot="button-prev"></div>
-    <div class="swiper-button-next" slot="button-next"></div>
+    <div class="swiper-pagination" slot="pagination"></div>
   </swiper>
 </template>
 
@@ -214,29 +225,33 @@ export default {
   data() {
     return {
       swiperOption: {
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+        slidesPerView: 1,
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
         },
-        slidesPerView: "auto",
       },
     };
   },
 };
 </script>
-<style scoped>
-.swiper {
-  width: 100%;
-}
-.container {
+<style lang="scss" scoped>
+.grid-ish {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  margin-top: 2rem;
+  p,
+  b,
+  li {
+    font-size: 1.25rem;
+  }
 }
-.swiper-button-next {
-  color: black;
+.grid-ish > * {
+  flex: 1 1 10em;
 }
-.swiper-button-prev {
-  color: black;
+#img {
+  text-align: center;
 }
 </style>

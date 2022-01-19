@@ -11,7 +11,10 @@
           <b-nav-item>
             <div class="v1">|</div>
           </b-nav-item>
-          <b-nav-item href="https://www.instagram.com/beautybyboz/">
+          <b-nav-item
+            href="https://www.instagram.com/beautybyboz/"
+            target="_blank"
+          >
             Instagram
           </b-nav-item>
           <b-nav-item>
@@ -21,11 +24,14 @@
         </b-navbar-nav>
       </b-navbar>
     </b-row>
-    <b-row>
+    <b-row id="copyright">
       <p>©2021 BeautyByBoz</p>
     </b-row>
     <b-row id="ref">
-      <p>Web design by <a href="https://www.enigmaly.ca">Enigmaly</a></p>
+      <p>
+        Web design by
+        <a href="https://www.enigmaly.ca" target="_blank">Enigmaly</a>
+      </p>
     </b-row>
   </footer>
 </template>
@@ -34,6 +40,8 @@
 footer {
   background-color: rgb(175, 174, 174);
   font-weight: 500;
+  border-radius: 30px;
+  box-shadow: 0px -1px 0px rgba(50, 50, 50, 0.75);
 }
 footer a {
   text-decoration: none;
@@ -49,6 +57,7 @@ footer p:hover {
 #top {
   font-size: 18px;
   padding: 10px 0 10px 0;
+  font-size: 1.25rem;
 }
 .row {
   justify-content: center;
@@ -70,12 +79,17 @@ img {
   .nav-item {
     p,
     a {
-      font-size: 1rem;
+      font-size: 1.25rem;
     }
   }
 }
+#copyright {
+  font-size: 1.25rem;
+}
 #ref {
   padding: 10px 0 10px 0;
-  font-size: 1rem;
+  p, a {
+    font-size: 1.25rem;
+  }
 }
 </style>

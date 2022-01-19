@@ -1,116 +1,121 @@
 <template>
   <div id="contact">
-    <form class="vue-form" @submit.prevent="submit">
-      <div class="error-message">
-        <p v-show="!email.valid">Please enter a valid email address.</p>
-      </div>
-
-      <fieldset>
-        <legend>Contact</legend>
-        <div>
-          <label class="label" for="name">Name</label>
-          <input type="text" name="name" id="name" required="" v-model="name" />
-        </div>
-        <div>
-          <label class="label" for="email">Email</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            required=""
-            :class="{ email, error: !email.valid }"
-            v-model="email.value"
-          />
-        </div>
-        <div>
-          <h4>Team Member</h4>
-          <p class="select">
-            <select class="budget" v-model="selection.member">
-              <option value="0">Daniela</option>
-              <option value="1">Vera</option>
-              <option value="2">Kristina</option>
-              <option value="3">Nikolija</option>
-            </select>
+    <div class="grid-ish">
+      <div class="col">
+        <div id="info">
+          <p><strong>BOOKING BY APPOINTMENTS ONLY</strong></p>
+          <p>{{ env_email }}</p>
+          <p>{{ env_phone_no }}</p>
+          <p>
+            If you would like more information, please fill out the form and we
+            will get back to you.
+          </p>
+          <div
+            style="
+              height: 400px;
+              width: 100%;
+              display: inline-block;
+              overflow: hidden;
+            "
+          >
+            <iframe
+              src="https://www.google.com/maps/d/u/0/embed?mid=1xrwM_eHy3LANSCBKWaopw0tVxGo5le44&ehbc=2E312F&z=10"
+              width="765"
+              height="445"
+              frameborder="0"
+              style="
+                position: relative;
+                top: -54px;
+                border: none;
+                pointer-events: none;
+              "
+            ></iframe>
+          </div>
+          <p id="link">
+            Mobile Services available, please see our
+            <router-link to="services"><strong>Services</strong></router-link
+            >.
           </p>
         </div>
+      </div>
+      <div class="col">
+        <form class="vue-form" @submit.prevent="submit">
+          <div class="error-message">
+            <p v-show="!email.valid">Please enter a valid email address.</p>
+          </div>
 
-        <!-- <div>
-          <h4>Inquiry</h4>
-
-          <ul class="vue-form-list">
-            <li>
+          <fieldset>
+            <legend>Contact</legend>
+            <div>
+              <label class="label" for="name">Name</label>
               <input
-                type="radio"
-                name="radio-1"
-                id="radio-1"
-                value="angular"
-                v-model="selection.framework"
+                type="text"
+                name="name"
+                id="name"
+                required=""
+                v-model="name"
               />
-              <label for="radio-1">General Inquiry</label>
-            </li>
-            <li>
+            </div>
+            <div>
+              <label class="label" for="email">Email</label>
               <input
-                type="radio"
-                name="radio-2"
-                id="radio-2"
-                value="react"
-                v-model="selection.framework"
+                type="email"
+                name="email"
+                id="email"
+                required=""
+                :class="{ email, error: !email.valid }"
+                v-model="email.value"
               />
-              <label for="radio-2">ReactJS</label>
-            </li>
-            <li>
-              <input
-                type="radio"
-                name="radio-3"
-                id="radio-3"
-                value="vue"
-                v-model="selection.framework"
-              />
-              <label for="radio-3">VueJS</label>
-            </li>
-          </ul>
-        </div> -->
-
-        <div>
-          <h4>Services</h4>
-          <ul class="vue-form-list">
-            <li v-for="(feature, index) in features" v-bind:key="index.id">
-              <input
-                type="checkbox"
-                :value="feature"
-                :id="'cb-feature-' + index"
-                v-model="selection.features"
-              />
-              <label :for="'cb-feature-' + index">{{ feature }}</label>
-            </li>
-            <li>
-              <input type="checkbox" id="checkbox-all" @click="checkAll" />
-              <label for="checkbox-all">Check All</label>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <label class="label" for="textarea">Message</label>
-          <textarea
-            class="message"
-            name="textarea"
-            id="textarea"
-            required=""
-            v-model="message.text"
-            :maxlength="message.maxlength"
-          ></textarea>
-          <span class="counter"
-            >{{ message.text.length }} / {{ message.maxlength }}</span
-          >
-        </div>
-        <div>
-          <input type="submit" value="Send" />
-        </div>
-      </fieldset>
-    </form>
-
-    <div class="debug">
-      <pre><code>{{ $data }}</code></pre>
+            </div>
+            <div>
+              <h4>Team Member</h4>
+              <p class="select">
+                <select class="budget" v-model="selection.member">
+                  <option value="0">Daniela</option>
+                  <option value="1">Vera</option>
+                  <option value="2">Kristina</option>
+                  <option value="3">Nikolija</option>
+                </select>
+              </p>
+            </div>
+            <div>
+              <h4>Services</h4>
+              <ul class="vue-form-list">
+                <li v-for="(feature, index) in features" v-bind:key="index.id">
+                  <input
+                    type="checkbox"
+                    :value="feature"
+                    :id="'cb-feature-' + index"
+                    v-model="selection.features"
+                  />
+                  <label :for="'cb-feature-' + index">{{ feature }}</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="checkbox-all" @click="checkAll" />
+                  <label for="checkbox-all">Check All</label>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <label class="label" for="textarea">Message</label>
+              <textarea
+                class="message"
+                name="textarea"
+                id="textarea"
+                required=""
+                v-model="message.text"
+                :maxlength="message.maxlength"
+              ></textarea>
+              <span class="counter"
+                >{{ message.text.length }} / {{ message.maxlength }}</span
+              >
+            </div>
+            <div>
+              <input type="submit" value="Send" />
+            </div>
+          </fieldset>
+        </form>
+      </div>
     </div>
   </div>
 </template>
@@ -120,9 +125,6 @@ var emailRegExp =
   /^[a-zA-Z0-9.!#$%&'*+=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
 export default {
-  // root node
-
-  // the instance state
   data: function () {
     return {
       name: "",
@@ -139,7 +141,6 @@ export default {
       ],
       selection: {
         member: "0",
-        // framework: "vue",
         features: [],
       },
       message: {
@@ -147,30 +148,27 @@ export default {
         maxlength: 255,
       },
       submitted: false,
+      env_email: process.env.VUE_APP_EMAIL,
+      env_phone_no: process.env.VUE_APP_PHONE_NUMBER,
     };
   },
   methods: {
-    // submit form handler
     submit: function () {
       this.submitted = true;
     },
-    // validate by type and value
     validate: function (type, value) {
       if (type === "email") {
         this.email.valid = this.isEmail(value) ? true : false;
       }
     },
-    // check for valid email adress
     isEmail: function (value) {
       return emailRegExp.test(value);
     },
-    // check or uncheck all
     checkAll: function (event) {
       this.selection.features = event.target.checked ? this.features : [];
     },
   },
   watch: {
-    // watching nested property
     "email.value": function (value) {
       this.validate("email", value);
     },
@@ -178,69 +176,71 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:300,400");
 
+.grid-ish {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.grid-ish > * {
+  flex: 1 1 10em;
+}
+.col:nth-of-type(1) {
+  align-items: center;
+  text-align: center;
+}
+#info p {
+  font-size: 20px;
+  strong {
+    font-size: 20px;
+    font-weight: 550;
+  }
+}
+#link strong:hover {
+  color: lightgray;
+}
 *,
 *::after,
 *::before {
   box-sizing: border-box;
 }
-
 #contact {
   color: black;
-  background: #949c4e;
-  background: linear-gradient(
-    115deg,
-    rgb(192, 190, 191) 10%,
-    rgb(245, 243, 240) 90%
-  );
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial,
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin-bottom: 3em;
 }
 html,
-body,
-.container {
+body {
   min-height: 100vh;
-}
-
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 a {
   color: black;
   text-decoration: none;
 }
-
 header {
   position: relative;
   height: 150px;
   padding-top: 100px;
 }
-
 header h1 {
   text-align: center;
   font-size: 2.4rem;
   font-weight: 300;
 }
-
-#contact {
-  display: flex;
-}
-
 .vue-form {
   font-size: 16px;
-  width: 500px;
+  width: 100%;
   padding: 15px 30px;
   border-radius: 4px;
-  margin: 50px auto;
-  width: 500px;
+
   background-color: whitesmoke;
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
 }
@@ -435,13 +435,13 @@ header h1 {
   transform: scale(0.9);
 }
 .vue-form .error-message {
-  height: 35px;
+  height: 40px;
   margin: 0px;
 }
 .vue-form .error-message p {
-  background: #e94b35;
+  background: rgb(223, 103, 103);
   color: #ffffff;
-  font-size: 1.4rem;
+  font-size: 1rem;
   text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -459,26 +459,6 @@ header h1 {
   font-size: 10px;
   padding: 4px;
 }
-
-.debug {
-  border-radius: 4px;
-  margin: 50px auto;
-  width: 500px;
-  background-color: #000;
-  padding: 50px;
-  background: rgba(0, 0, 0, 0.8);
-  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
-}
-
-.debug pre {
-  color: #ffffff;
-  font-size: 18px;
-  line-height: 30px;
-  font-family: "Source Code Pro", monospace;
-  font-weight: 300;
-  white-space: pre-wrap;
-}
-
 @-webkit-keyframes cd-bounce {
   0%,
   100% {

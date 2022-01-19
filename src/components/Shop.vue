@@ -21,32 +21,29 @@ export default {
   },
 };
 </script>
-<style scoped>
-@media (min-width: 1366px) {
-  .shop {
-    height: calc(100vh - 459px);
-    min-height: 100vh;
-    flex-direction: column;
-    background-color: whitesmoke;
-  }
-  .bv-example-row img {
-    width: 300px;
-  }
+<style lang="scss" scoped>
+.shop {
+  flex-direction: column;
+  background-color: rgb(175, 174, 174);
+  margin-bottom: 2rem;
   .title-wrapper {
     width: 100%;
     position: relative;
     display: table;
     table-layout: fixed;
-    background-color: #dcc2b0;
-    background-color: rgb(236, 227, 221);
+    background-color: rgb(139, 139, 139);
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.2);
     padding: 20px;
+    .title-inner {
+      text-align: center;
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
   }
-  .title-inner {
-    text-align: center;
-  }
-  h1 {
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 32px;
-  }
+}
+.bv-example-row img {
+  width: 300px;
 }
 </style>
