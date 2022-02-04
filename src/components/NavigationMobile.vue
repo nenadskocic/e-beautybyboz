@@ -12,12 +12,12 @@
       <a
         href="https://www.instagram.com/beautybyboz/"
         target="_blank"
-        class="fab fa-instagram fa-spin fa-2x"
+        class="fab fa-instagram fa-2x"
       ></a>
       <a
         href="https://www.facebook.com/BeautybyBoz.BbB"
         target="_blank"
-        class="fab fa-facebook fa-spin fa-2x"
+        class="fab fa-facebook fa-2x"
       ></a>
     </div>
   </div>
@@ -67,9 +67,6 @@ export default {};
     .fab {
       text-decoration: none;
       color: black;
-    }
-    .fa-spin {
-      animation: fa-spin 8s infinite linear !important;
     }
   }
 }

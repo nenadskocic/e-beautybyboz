@@ -10,12 +10,12 @@
       <a
         href="https://www.instagram.com/beautybyboz/"
         target="_blank"
-        class="fab fa-instagram fa-spin fa-2x"
+        class="fab fa-instagram fa-2x"
       ></a>
       <a
         href="https://www.facebook.com/BeautybyBoz.BbB"
         target="_blank"
-        class="fab fa-facebook fa-spin fa-2x"
+        class="fab fa-facebook fa-2x"
       ></a>
     </ul>
   </div>
@@ -43,9 +43,8 @@ export default {};
       &:hover {
         color: lightgray;
       }
-      display: block;
       img {
-        width: 10rem;
+        width: 10em;
       }
     }
     a {
@@ -57,9 +56,6 @@ export default {};
     }
     .fab {
       margin: 0 0 0 30px;
-    }
-    .fa-spin {
-      animation: fa-spin 8s infinite linear !important;
     }
   }
 }
