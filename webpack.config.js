@@ -37,14 +37,23 @@ const TerserPlugin = require('terser-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+require('dotenv').config();
 
 module.exports = {
-	mode: 'development',
+	mode: 'production',
+	// node: {
+	// 	fs: "empty"
+	// },
 
 	entry: {
 		app: [
-			'./src/main.js'
+			'./src/main.js',
 		]
+	},
+	performance: {
+		hints: false,
+		maxEntrypointSize: 512000,
+		maxAssetSize: 512000
 	},
 
 	plugins: [
@@ -54,7 +63,6 @@ module.exports = {
 		new HtmlWebpackPlugin(),
 		new Dotenv(),
 	],
-
 	module: {
 		rules: [
 			{
