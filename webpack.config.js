@@ -40,7 +40,7 @@ const Dotenv = require('dotenv-webpack');
 require('dotenv').config();
 
 module.exports = {
-	mode: 'production',
+	mode: 'development',
 	// node: {
 	// 	fs: "empty"
 	// },
@@ -55,14 +55,6 @@ module.exports = {
 		maxEntrypointSize: 512000,
 		maxAssetSize: 512000
 	},
-
-	plugins: [
-		new webpack.ProgressPlugin(),
-		new MiniCssExtractPlugin({ filename: 'bundle.[contenthash].css' }),
-		new VueLoaderPlugin(),
-		new HtmlWebpackPlugin(),
-		new Dotenv(),
-	],
 	module: {
 		rules: [
 			{
@@ -75,21 +67,13 @@ module.exports = {
 				test: /\.vue$/,
 				loader: 'vue-loader',
 			},
-			{
+			{		
 				test: /.(scss|css)$/,
 				use: [
-					{
-						loader: MiniCssExtractPlugin.loader
-					},
-					{
-						loader: 'css-loader',
-
-						options: {
-							sourceMap: true,
-						},
-					},
-				],
-
+					'vue-style-loader',
+					'css-loader',
+					'sass-loader'
+				]
 			},
 			{
 				test: /\.(png|jpg|gif)$/i,
@@ -121,6 +105,13 @@ module.exports = {
 			},
 		]
 	},
+	plugins: [
+		new webpack.ProgressPlugin(),
+		new MiniCssExtractPlugin({ filename: 'bundle.[contenthash].css' }),
+		new VueLoaderPlugin(),
+		new HtmlWebpackPlugin(),
+		new Dotenv(),
+	],
 	resolve: {
         alias: {
             'vue$': 'vue/dist/vue.esm.js'
