@@ -38,7 +38,7 @@
 <script></script>
 <style lang="scss" scoped>
 footer {
-  background-color: rgb(175, 174, 174);
+  background-color: whitesmoke;
   font-weight: 500;
   border-radius: 30px;
   box-shadow: 0px -1px 0px rgba(50, 50, 50, 0.75);
@@ -69,7 +69,7 @@ img {
   width: 200px;
 }
 #footerNav {
-  background-color: rgb(175, 174, 174);
+  background-color: whitesmoke;
   width: 100%;
   align-items: center;
   justify-content: center;

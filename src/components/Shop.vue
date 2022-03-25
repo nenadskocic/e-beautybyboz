@@ -24,17 +24,19 @@ export default {
 <style lang="scss" scoped>
 .shop {
   flex-direction: column;
-  background-color: rgb(175, 174, 174);
+  background-color: whitesmoke;
   margin-bottom: 2rem;
+
   .title-wrapper {
     width: 100%;
     position: relative;
     display: table;
     table-layout: fixed;
-    background-color: rgb(139, 139, 139);
+    background-color: lightgray;
     border-radius: 30px;
     box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.2);
     padding: 20px;
+
     .title-inner {
       text-align: center;
       h1 {

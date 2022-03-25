@@ -42,7 +42,7 @@
 </template>
 <style lang="scss" scoped>
 .about {
-  background-color: rgb(175, 174, 174);
+  background-color: whitesmoke;
   min-height: 100vh;
 
   .grid-ish {

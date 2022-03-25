@@ -97,7 +97,7 @@ export default {
 
 <style lang="scss" scoped>
 .services {
-  background-color: rgb(175, 174, 174);
+  background-color: whitesmoke;
   min-height: 100vh;
 
   .title-wrapper {
@@ -105,7 +105,7 @@ export default {
     position: relative;
     display: table;
     table-layout: fixed;
-    background-color: rgb(139, 139, 139);
+    background-color: lightgray;
     border-radius: 30px;
     box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.2);
     padding: 20px;

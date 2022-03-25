@@ -55,14 +55,13 @@ export default {
 @import url("https://use.fontawesome.com/releases/v5.9.0/css/all.css");
 * {
   font-size: 1rem;
-  font-family: "Apple Chancery", cursive;
+  font-family: "Verdana";
 }
 body {
   width: 100%;
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", Tahoma;
   background-color: whitesmoke;
   display: flex;
   flex-direction: column;
@@ -85,7 +84,7 @@ body {
   width: calc(100%);
   min-height: calc(100vh);
   padding: 20px;
-  background-color: rgb(175, 174, 174);
+  background-color: whitesmoke;
   transition: 1s transform cubic-bezier(0, 0.12, 0.14, 1);
 }
 .open {
